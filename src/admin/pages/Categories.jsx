@@ -11,15 +11,16 @@ export default function Categories() {
   const handleAdd = (e) => {
     e.preventDefault();
     if (!name.trim()) return;
-    const updated = [...categories, { name: name.trim(), image: image.trim() || 'https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&q=80' }];
+    const nextId = Math.max(0, ...categories.map(c => c.id || 0)) + 1;
+    const updated = [...categories, { id: nextId, name: name.trim(), image: image.trim() || 'https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&q=80' }];
     setCategories(updated);
     saveCategories(updated);
     setName('');
     setImage('');
   };
 
-  const handleDelete = (catName) => {
-    const updated = categories.filter((c) => c.name !== catName);
+  const handleDelete = (catId) => {
+    const updated = categories.filter((c) => c.id !== catId);
     setCategories(updated);
     saveCategories(updated);
     setDeleteTarget(null);
@@ -56,7 +57,7 @@ export default function Categories() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {categories.map((cat) => (
           <div
-            key={cat.name}
+            key={cat.id}
             className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden group"
           >
             <div className="aspect-[3/2] bg-gray-100 overflow-hidden">
@@ -101,7 +102,7 @@ export default function Categories() {
                 Cancelar
               </button>
               <button
-                onClick={() => handleDelete(deleteTarget.name)}
+                onClick={() => handleDelete(deleteTarget.id)}
                 className="px-4 py-2 text-sm font-semibold text-white bg-red-600 hover:bg-red-700 rounded-lg transition-colors"
               >
                 Eliminar

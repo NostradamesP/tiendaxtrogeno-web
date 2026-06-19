@@ -198,12 +198,12 @@ export const products = [
 ];
 
 export const categories = [
-  { name: 'Camisas', image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=80' },
-  { name: 'Pantalones', image: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&q=80' },
-  { name: 'Jeans', image: 'https://images.unsplash.com/photo-1542272454315-4c01d7abdf4a?w=600&q=80' },
-  { name: 'Chaquetas/Blazers', image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&q=80' },
-  { name: 'Zapatos', image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&q=80' },
-  { name: 'Accesorios', image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&q=80' },
+  { id: 1, name: 'Camisas', image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=80' },
+  { id: 2, name: 'Pantalones', image: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&q=80' },
+  { id: 3, name: 'Jeans', image: 'https://images.unsplash.com/photo-1542272454315-4c01d7abdf4a?w=600&q=80' },
+  { id: 4, name: 'Chaquetas/Blazers', image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&q=80' },
+  { id: 5, name: 'Zapatos', image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&q=80' },
+  { id: 6, name: 'Accesorios', image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&q=80' },
 ];
 
 export const instagramPosts = [

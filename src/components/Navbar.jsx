@@ -100,6 +100,17 @@ export default function Navbar({ onCartClick }) {
                 {link.label}
               </Link>
             ))}
+            <Link
+              to="/admin"
+              onClick={() => setOpen(false)}
+              className={`block text-sm font-medium ${
+                location.pathname === '/admin'
+                  ? 'text-primary-600'
+                  : 'text-gray-600'
+              }`}
+            >
+              Admin
+            </Link>
             <hr className="border-gray-100" />
             <a
               href={STORE_CONFIG.instagramUrl}

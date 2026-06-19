@@ -25,7 +25,11 @@ function init(key, defaultValue) {
 
 export function getProducts() {
   init(KEYS.products, defaultProducts);
-  return JSON.parse(localStorage.getItem(KEYS.products));
+  try {
+    return JSON.parse(localStorage.getItem(KEYS.products)) || defaultProducts;
+  } catch {
+    return defaultProducts;
+  }
 }
 
 export function saveProducts(data) {
@@ -34,7 +38,11 @@ export function saveProducts(data) {
 
 export function getCategories() {
   init(KEYS.categories, defaultCategories);
-  return JSON.parse(localStorage.getItem(KEYS.categories));
+  try {
+    return JSON.parse(localStorage.getItem(KEYS.categories)) || defaultCategories;
+  } catch {
+    return defaultCategories;
+  }
 }
 
 export function saveCategories(data) {
@@ -43,7 +51,11 @@ export function saveCategories(data) {
 
 export function getOrders() {
   init(KEYS.orders, []);
-  return JSON.parse(localStorage.getItem(KEYS.orders));
+  try {
+    return JSON.parse(localStorage.getItem(KEYS.orders)) || [];
+  } catch {
+    return [];
+  }
 }
 
 export function saveOrders(data) {
@@ -52,7 +64,11 @@ export function saveOrders(data) {
 
 export function getConfig() {
   init(KEYS.config, defaultConfig);
-  return JSON.parse(localStorage.getItem(KEYS.config));
+  try {
+    return JSON.parse(localStorage.getItem(KEYS.config)) || defaultConfig;
+  } catch {
+    return defaultConfig;
+  }
 }
 
 export function saveConfig(data) {
