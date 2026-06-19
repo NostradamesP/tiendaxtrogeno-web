@@ -38,6 +38,12 @@ export default function Navbar({ onCartClick }) {
                 {link.label}
               </Link>
             ))}
+            <Link
+              to="/admin"
+              className="text-sm font-medium text-gray-400 hover:text-gray-900 transition-colors"
+            >
+              Admin
+            </Link>
           </nav>
 
           <div className="flex items-center gap-4">
