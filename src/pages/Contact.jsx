@@ -1,4 +1,4 @@
-import { Phone, MessageCircle, Instagram, Facebook, Clock, MapPin, Mail } from 'lucide-react';
+import { Phone, MessageCircle, Instagram, Facebook, Clock, MapPin } from 'lucide-react';
 import { STORE_CONFIG } from '../config/store';
 
 export default function Contact() {
@@ -75,7 +75,7 @@ export default function Contact() {
             </a>
 
             <a
-              href="#"
+              href="https://www.facebook.com/xtrogenolocation/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-4 border border-gray-100 hover:border-gray-200 transition-colors group"
